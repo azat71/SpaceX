@@ -6,13 +6,15 @@
     # Если пользователь всё ввёл верно выполните его программу.
     # Если поймали ошибку ---> Спросите снова как работает встроенная функция reversed().
 #==========================================================================================================
-# while True:
-#   primer = input("Kак работает функция reversed()?")
-#   try:
+while True:
+	try:
+		a=input('как работает встроенная программа reversed():')
+		if a.startswith('reversed')and len(a)> len('reversed'):
+			print(tuple(eval(a)))
+			break
+		else:
+			print('Где то вы ошиблись попробуйте еще раз...')
+			continue
 
-#       a = input("введи цифры")
-#       b = reversed(a)
-#       for x in b:
-#         print(x) 
-#   except SyntaxError:
-#     print("Неверный знак операции!")
+	except SyntaxError:
+		print('Где то вы ошиблись попробуйте заново ')
